@@ -12,7 +12,6 @@ document.getElementById("inputUserName").addEventListener("keydown", (e) => {
 });
 
 document.getElementById("buttonCheck").addEventListener("click", () => {
-    console.log("Checking...");
     const urlAPI = "https://www.openvy.com/api/coming/usernamecheck";
     fetch(urlAPI, {
         method: "POST",
