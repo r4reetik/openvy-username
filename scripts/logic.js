@@ -42,6 +42,7 @@ const available = () => {
     document.getElementById("displayResult").classList.remove("text-danger");
     document.getElementById("displayResult").classList.add("text-success");
     document.getElementById("displayAppeal").removeAttribute("hidden");
+    window.scrollTo(0, document.body.scrollHeight);
 };
 
 const notAvailable = () => {
@@ -49,4 +50,5 @@ const notAvailable = () => {
     document.getElementById("displayResult").classList.remove("text-success");
     document.getElementById("displayResult").classList.add("text-danger");
     document.getElementById("displayAppeal").setAttribute("hidden", true);
+    window.scrollTo(0, document.body.scrollHeight);
 };

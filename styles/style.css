@@ -5,3 +5,12 @@
 .head {
     font-weight: 500;
 }
+
+@media (max-width: 576px) {
+    div.jumbotron.py-4 > h1 {
+        font-size: 36px;
+    }
+    div.jumbotron.py-4 > p {
+        font-size: 18px;
+    }
+}
