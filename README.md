@@ -3,13 +3,13 @@
 Hi! I'm **Reetik Rajan** and I made this repository to ease the process of checking availablity of your desired username on Openvy.
 
 ## Usage
+### Live
+It is available at [Openvy Username](https://r4reetik.github.io/openvy-username).
 ### Download 
  1. Click on the **Clone or Download**.
  2. Select **Download ZIP** option.
  3. Extract the zip file using *7zip* or *WinRAR*.
  4. Run `index.html` in your browser.
-### Usage
-It is available at [Openvy Username](https://r4reetik.github.io/openvy-username).
 
 ## Presence
 ![](https://image.flaticon.com/icons/png/16/93/93618.png) Website - [https://www.technofevers.com/reetik](http://www.technofevers.com/reetik) <br>
