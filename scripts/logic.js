@@ -12,6 +12,8 @@ document.getElementById("inputUserName").addEventListener("keydown", (e) => {
 });
 
 document.getElementById("buttonCheck").addEventListener("click", () => {
+    document.getElementById("loader").removeAttribute("hidden");
+    document.getElementById("overlay").removeAttribute("hidden");
     const urlAPI = "https://www.openvy.com/api/coming/usernamecheck";
     fetch(urlAPI, {
         method: "POST",
@@ -31,6 +33,8 @@ document.getElementById("buttonCheck").addEventListener("click", () => {
             } else {
                 notAvailable();
             }
+            document.getElementById("loader").setAttribute("hidden", true);
+            document.getElementById("overlay").setAttribute("hidden", true);
         })
         .catch(function (err) {
             console.warn("Something went wrong.", err);
