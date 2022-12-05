@@ -1,8 +1,6 @@
 document.getElementById("inputUserName").addEventListener("input", () => {
     document.getElementById("displayResult").innerText = "";
-    document.getElementById("inputUserName").value = document
-        .getElementById("inputUserName")
-        .value.replace(/[^a-z0-9_]/gi, "");
+    document.getElementById("inputUserName").value = document.getElementById("inputUserName").value.replace(/[^a-z0-9_]/gi, "");
 });
 
 document.getElementById("inputUserName").addEventListener("keydown", (e) => {
@@ -14,21 +12,13 @@ document.getElementById("inputUserName").addEventListener("keydown", (e) => {
 document.getElementById("buttonCheck").addEventListener("click", () => {
     document.getElementById("loader").removeAttribute("hidden");
     document.getElementById("overlay").removeAttribute("hidden");
-    const urlAPI = "https://www.openvy.com/api/coming/usernamecheck";
-    fetch(urlAPI, {
-        method: "POST",
-        body: JSON.stringify({
-            username: document.getElementById("inputUserName").value,
-        }),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8",
-        },
-    })
+    const urlAPI = "https://openvy.com/api/alpha-waitlist/checkusername";
+    fetch(urlAPI + "?userName=" + document.getElementById("inputUserName").value)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            if (data.message === "Available") {
+            if (data.isUserNameAvailable) {
                 available();
             } else {
                 notAvailable();
